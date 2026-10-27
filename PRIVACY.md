@@ -4,7 +4,7 @@ This repository is a **Claude Code plugin** that configures a remote MCP client.
 
 ## What connects where
 
-- Claude Code talks to **`https://mcp.browsebridge.com/mcp`** using the API key Claude prompts for when you enable the plugin (`userConfig`). Claude stores that key securely. It is sent only to that host.
+- Claude Code talks to **`https://mcp.browsebridge.com/mcp`** using `${user_config.api_key}`, the key Claude prompts for when you enable the plugin. Claude stores that key securely. It is sent only to that host.
 - The [Browse Bridge Chrome extension](https://chromewebstore.google.com/detail/browse-bridge/fbnpefbmmljjgnlagkcbnnfknpomhidb) shares tabs you explicitly **Enable**.
 - Page content, screenshots, and action results are processed to fulfill agent `browser_*` tools according to your Browse Bridge account plan and legal attestations.
 

@@ -24,12 +24,7 @@ When you enable the plugin, Claude prompts for the API key and stores it securel
 
 ### Without the plugin
 
-This shell variable is only for the manual command below, not for the plugin.
-
-```bash
-claude mcp add --transport http browse-bridge https://mcp.browsebridge.com/mcp \
-  --header "Authorization: Bearer $BROWSEBRIDGE_API_KEY"
-```
+Connect Claude Code to the remote server using the steps at https://browsebridge.com/docs/mcp.
 
 ## Usage
 
@@ -74,7 +69,7 @@ Sensitive-site clicks/types/navigations and cross-origin navigations (and cross-
 
 | Variable | Required | Description |
 | --- | --- | --- |
-| `BROWSEBRIDGE_API_KEY` | Yes | Plugin `userConfig` (sensitive). Claude prompts at enable and stores it securely. Sent only to `https://mcp.browsebridge.com/mcp` as `Authorization: Bearer …`. |
+| `userConfig.api_key` | Yes | Sensitive plugin setting, not an environment variable. Claude prompts at enable and stores it securely. Sent only to `https://mcp.browsebridge.com/mcp` as `Authorization: Bearer …`. |
 
 ## Privacy Policy
 
