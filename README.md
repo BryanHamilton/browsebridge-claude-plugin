@@ -11,12 +11,7 @@ Claude Code plugin that connects the **Browse Bridge** remote MCP server so Clau
 
 1. A Browse Bridge account: https://browsebridge.com/sign-up (plans: https://browsebridge.com/plans; paid tier $29.97/mo).
 2. The Browse Bridge Chrome extension, signed in with the same account.
-3. An API key from https://browsebridge.com/dashboard/connections (starts with `bbk_`). Keep it secret.
-4. Export it before starting Claude Code:
-
-```bash
-export BROWSEBRIDGE_API_KEY=bbk_...
-```
+3. An API key from https://browsebridge.com/dashboard/connections (starts with `bbk_`). Keep it secret. When you enable the plugin, Claude prompts for that key and stores it securely. Do not export it for the plugin.
 
 ## Install
 
@@ -25,9 +20,11 @@ export BROWSEBRIDGE_API_KEY=bbk_...
 /plugin install browse-bridge@browse-bridge
 ```
 
-Then run `/mcp` to confirm `browse-bridge` is connected and the `browser_*` tools are listed.
+When you enable the plugin, Claude prompts for the API key and stores it securely. Then run `/mcp` to confirm `browse-bridge` is connected and the `browser_*` tools are listed.
 
 ### Without the plugin
+
+This shell variable is only for the manual command below, not for the plugin.
 
 ```bash
 claude mcp add --transport http browse-bridge https://mcp.browsebridge.com/mcp \
@@ -77,7 +74,7 @@ Sensitive-site clicks/types/navigations and cross-origin navigations (and cross-
 
 | Variable | Required | Description |
 | --- | --- | --- |
-| `BROWSEBRIDGE_API_KEY` | Yes | API key from the Browse Bridge dashboard, sent as `Authorization: Bearer …` |
+| `BROWSEBRIDGE_API_KEY` | Yes | Plugin `userConfig` (sensitive). Claude prompts at enable and stores it securely. Sent only to `https://mcp.browsebridge.com/mcp` as `Authorization: Bearer …`. |
 
 ## Privacy Policy
 
