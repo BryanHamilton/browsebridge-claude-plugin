@@ -1,0 +1,27 @@
+{
+  "name": "browse-bridge",
+  "displayName": "Browse Bridge",
+  "version": "1.0.0",
+  "description": "Shared-tab browser control via the Browse Bridge remote MCP server: observe, click, type, navigate, and screenshot Chrome tabs you have explicitly Enabled. Requires the Browse Bridge Chrome extension and a Browse Bridge API key.",
+  "author": {
+    "name": "Bryan Hamilton",
+    "email": "support@browsebridge.com",
+    "url": "https://browsebridge.com"
+  },
+  "homepage": "https://browsebridge.com",
+  "repository": "https://github.com/BryanHamilton/browsebridge-claude-plugin",
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "browser",
+    "automation",
+    "shared-tab",
+    "chrome-extension",
+    "browse-bridge"
+  ],
+  "icon": "./assets/logo.svg",
+  "documentationUrl": "https://github.com/BryanHamilton/browsebridge-claude-plugin#readme",
+  "supportUrl": "https://browsebridge.com/faq",
+  "privacyPolicyUrl": "https://browsebridge.com/privacy",
+  "termsOfServiceUrl": "https://browsebridge.com/terms"
+}

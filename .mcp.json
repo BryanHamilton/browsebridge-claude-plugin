@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "browse-bridge": {
+      "type": "http",
+      "url": "https://mcp.browsebridge.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${BROWSEBRIDGE_API_KEY}"
+      }
+    }
+  }
+}

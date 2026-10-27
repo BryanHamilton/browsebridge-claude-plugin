@@ -1,0 +1,13 @@
+{
+  "name": "browse-bridge",
+  "owner": { "name": "Bryan Hamilton", "email": "support@browsebridge.com" },
+  "metadata": { "description": "Browse Bridge plugins for Claude Code" },
+  "plugins": [
+    {
+      "name": "browse-bridge",
+      "source": "./",
+      "description": "Shared-tab browser control via the Browse Bridge remote MCP server.",
+      "category": "productivity"
+    }
+  ]
+}
