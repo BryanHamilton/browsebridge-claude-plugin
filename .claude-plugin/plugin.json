@@ -1,7 +1,7 @@
 {
   "name": "browse-bridge",
   "displayName": "Browse Bridge",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Shared-tab browser control via the Browse Bridge remote MCP server: observe, click, type, navigate, and screenshot Chrome tabs you have explicitly Enabled. Requires the Browse Bridge Chrome extension and a Browse Bridge API key.",
   "author": {
     "name": "Bryan Hamilton",
