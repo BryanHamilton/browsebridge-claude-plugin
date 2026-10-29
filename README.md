@@ -31,9 +31,9 @@ Connect Claude Code to the remote server using the steps at https://browsebridge
 1. Open a normal website tab (not `chrome://`).
 2. Click the Browse Bridge toolbar icon and **Enable** the tab. Use **Take control** (Ctrl+Shift+Period) to take it back at any time.
 3. Ask Claude to work in that tab. The bundled `browse-bridge` skill teaches the observe → act → verify loop.
-4. Sensitive sites and cross-origin navigations return `APPROVAL_REQUIRED`; Approve or Deny in the Chrome side panel.
+4. Sensitive-site click, type, key, select, and navigation, and cross-origin navigations, return `APPROVAL_REQUIRED`; Approve or Deny in the Chrome side panel. Expired approvals return `APPROVAL_EXPIRED`.
 
-## Tools (19)
+## Tools (20)
 
 | Tool | What it does |
 | --- | --- |
@@ -54,6 +54,7 @@ Connect Claude Code to the remote server using the steps at https://browsebridge
 | `browser_wait` | Pause 0–30000 ms. |
 | `browser_release_control` | Give the tab back to the human (`controlMode: "human"`). |
 | `browser_handle_dialog` | Accept or dismiss a pending JavaScript `alert` / `confirm` / `prompt` (`action`: accept\|dismiss; optional `promptText` when accepting a prompt). |
+| `browser_get_approval` | Read-only status of one approval (`sessionId`, `approvalId`): `pending`, `approved`, `denied`, `expired`, `cancelled`, or `consumed`. Does not return the action payload. |
 | `browser_cancel_approval` | Withdraw a pending agent approval (`approvalId`). |
 | `get_profile` | Read-only Browse Bridge user id for the signed-in account (no email, tokens, cookies, or page content). |
 
@@ -63,7 +64,7 @@ While the agent has control, a page `alert` / `confirm` / `prompt` stays **pendi
 
 ### Approvals
 
-Sensitive-site clicks/types/navigations and cross-origin navigations (and cross-origin link clicks) return **`APPROVAL_REQUIRED`**. The human Approves or Denies in the Chrome side panel. The agent can withdraw its own request with **`browser_cancel_approval`** (`APPROVAL_CANCELLED` — that is not a human Deny). While an approval is pending, observe/screenshot/wait/get_status/list_sessions/release_control still run.
+Sensitive site gates **click, type, key, select, and navigation** (`sensitiveMode` on `browser_get_status`). Those actions, plus cross-origin navigations and cross-origin link clicks, return **`APPROVAL_REQUIRED`**. That wait is not `CHALLENGE_DETECTED`. The human Approves or Denies in the Chrome side panel. Approve runs that action once; Deny is **`APPROVAL_DENIED`**. Retrying the same pending action returns **`APPROVAL_PENDING`**. Poll with read-only **`browser_get_approval`** (`sessionId`, `approvalId`): status is `pending`, `approved`, `denied`, `expired`, `cancelled`, or `consumed`, and the call does not return the action payload. A pending approval expires after about 2 minutes. The next call for that same action or idempotency key returns **`APPROVAL_EXPIRED`** (recoverable) with the old `approvalId`; a further retry asks for a new approval. Cancelling an already expired approval also returns `APPROVAL_EXPIRED` and does not cancel it. The agent withdraws its own still-pending request with **`browser_cancel_approval`** (`APPROVAL_CANCELLED` — that is not a human Deny). While an approval is pending, observe/screenshot/wait/get_status/list_sessions/release_control still run.
 
 ## Configuration
 
