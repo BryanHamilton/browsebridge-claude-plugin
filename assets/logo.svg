@@ -1,30 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Browse Bridge">
-  <rect width="512" height="512" rx="96" fill="#1A1410"/>
-  <defs>
-    <linearGradient id="sand" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#EADBC3"/>
-      <stop offset="100%" stop-color="#DDC49F"/>
-    </linearGradient>
-    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#DD762F"/>
-      <stop offset="100%" stop-color="#BD5419"/>
-    </linearGradient>
-    <linearGradient id="bridge" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#D96D2C"/>
-      <stop offset="55%" stop-color="#C65B20"/>
-      <stop offset="100%" stop-color="#A94715"/>
-    </linearGradient>
-  </defs>
-  <g transform="translate(86 140) scale(1.05)">
-    <rect y="18" width="160" height="126" rx="24" fill="url(#sand)"/>
-    <circle cx="25" cy="43" r="8" fill="#FFFDF8"/>
-    <circle cx="50" cy="43" r="8" fill="#FFFDF8"/>
-    <circle cx="75" cy="43" r="8" fill="#FFFDF8"/>
-    <rect x="145" y="28" width="166" height="116" rx="24" fill="url(#orange)"/>
-    <circle cx="234" cy="49" r="8" fill="#FFFDF8"/>
-    <circle cx="259" cy="49" r="8" fill="#FFFDF8"/>
-    <circle cx="284" cy="49" r="8" fill="#FFFDF8"/>
-    <path d="M52 145c27-70 90-76 138-52 33 16 54 36 71 52h-39c-19-19-36-32-59-39-44-14-82 3-103 39Z" fill="url(#bridge)"/>
-    <path d="M83 145c20-34 50-46 77-46 28 0 53 12 73 46h-28c-12-21-29-31-46-31-19 0-37 10-48 31Z" fill="#F7F2E8"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="768" height="768" viewBox="0 0 768 768" fill="none">
+<title>Browse Bridge — branded icon seam corrected</title>
+<desc>Native-vector Browse Bridge icon; the center bridge pillar shares the exact edges of the right orange browser frame for a seamless intersection.</desc>
+
+<!-- Rear charcoal browser -->
+<path fill="#373737" fill-rule="evenodd" d="M317 114 H482 Q500 114 510 126 L531 151 Q541 164 556 164 H669 Q715 164 715 205 V481 Q715 524 673 524 H503 V486 H663 Q678 486 678 471 V212 Q678 201 667 201 H277 V153 Q277 114 318 114 Z
+M355 164 a19 19 0 1 0 -38 0 a19 19 0 1 0 38 0 Z
+M410 164 a19 19 0 1 0 -38 0 a19 19 0 1 0 38 0 Z
+M466 164 a19 19 0 1 0 -38 0 a19 19 0 1 0 38 0 Z"/>
+
+<!-- Foreground orange browser -->
+<path fill="#E56213" fill-rule="evenodd" d="M99 223 H352 Q368 223 379 238 L392 258 Q398 268 409 268 H458 Q500 268 500 309 V340 H468 V327 Q468 318 457 318 H112 Q91 318 91 338 V575 Q91 597 114 597 H450 Q468 597 468 578 V385 H500 V591 Q500 634 459 634 H99 Q55 634 55 591 V270 Q55 223 99 223 Z
+M137 271 a20 20 0 1 0 -40 0 a20 20 0 1 0 40 0 Z
+M197 271 a20 20 0 1 0 -40 0 a20 20 0 1 0 40 0 Z
+M258 271 a20 20 0 1 0 -40 0 a20 20 0 1 0 40 0 Z"/>
+
+<!-- Bridge arch, subtly raised/re-registered at the orange window intersection -->
+<path fill="#E56213" d="M133 483
+C221 391 326 343 430 340
+C535 338 619 379 674 456
+Q682 467 677 476
+Q673 482 664 482
+C610 418 533 377 433 378
+C341 382 263 423 194 483 Z"/>
+<path fill="#E56213" d="M322 399 Q342 389 361 384 V483 H322 Z"/>
+<path fill="#E56213" d="M468 374 H500 V483 H468 Z"/>
+<path fill="#E56213" d="M563 400 Q582 409 600 422 V483 H563 Z"/>
 </svg>
